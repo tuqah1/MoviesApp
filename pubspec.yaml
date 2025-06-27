@@ -35,9 +35,10 @@ dependencies:
   cloud_firestore: 
   random_string: 
   firebase_core:
-  shared_preferences:
   carousel_slider: ^5.0.0
+  shared_preferences: ^2.0.15
   curved_navigation_bar: ^1.0.6 
+  qr_flutter: ^4.0.0
   # flutter_stripe: 
   # http: 
 

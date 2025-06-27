@@ -1,17 +1,15 @@
 import 'package:film/pages/bottomnav.dart';
-// import 'package:film/services/constant.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:film/pages/login.dart';
 import 'package:film/pages/home.dart';
 import 'package:film/pages/signup.dart';
 import 'package:film/pages/detail_page.dart';
-//  import 'package:flutter_stripe/flutter_stripe.dart';
+import 'pages/booking.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //  Stripe.publishableKey = publishedkey;
-  // await Stripe.instance.applySettings();
   await Firebase.initializeApp();
   runApp(MyApp());
 }
@@ -43,7 +41,8 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: BottomNav(),
+           home: LoginPage(),
+
     );
   }
 }

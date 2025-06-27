@@ -1,3 +1,4 @@
+import 'package:film/pages/bottomnav.dart';
 import 'package:film/pages/home.dart';
 // import 'package:film/services/constant.dart';
 import 'package:film/services/database.dart';
@@ -9,7 +10,7 @@ import 'package:intl/intl.dart';
 import 'dart:convert';
 
 class DetailPage extends StatefulWidget {
-  String image, name, shortdetail, moviedetail, price;
+  String  image, name, shortdetail, moviedetail, price;
 
   DetailPage({
     required this.image,
@@ -82,7 +83,7 @@ class _DetailPageState extends State<DetailPage> {
         onTap: () {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => Home()), // ← اسم صفحة الهوم
+            MaterialPageRoute(builder: (context) => BottomNav()), // ← اسم صفحة الهوم
           );
         },
         child: const Icon(
@@ -136,7 +137,7 @@ class _DetailPageState extends State<DetailPage> {
                         height: 1.4,
                       ),
                     ),
-                    const SizedBox(height: 20.0),
+                    // const SizedBox(height: 6.0),
                     const Text(
                       "Select Date",
                       style: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:film/pages/bottomnav.dart';
 import 'package:film/pages/home.dart';
 import 'package:film/pages/signup.dart';
 import 'package:film/services/database.dart';
@@ -54,7 +55,7 @@ class _LoginFormState extends State<LoginForm> {
       await SharedPreferenceHelper().saveUserEmail(email);
       await SharedPreferenceHelper().saveUserDisplayName(myname);
 
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNav()));
     } on FirebaseAuthException catch (e) {
       String message = "Something went wrong.";
       if (e.code == "user-not-found") {
